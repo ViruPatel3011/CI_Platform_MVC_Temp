@@ -1,0 +1,20 @@
+.btn-login {
+    font-family: Raleway-SemiBold;
+    font-size: 13px;
+    color: #F88634;
+    letter-spacing: 1px;
+    line-height: 37px;
+    font-size: 20px;
+    border-color:  #F88634;
+    border-radius: 24px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* .btn-login:hover {
+    color: #FFF;
+    background: rgb(240, 173, 78, 0.75);
+    border: 2px solid rgba(240, 173, 78, 0.75);
+  } */

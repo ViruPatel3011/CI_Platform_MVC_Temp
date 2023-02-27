@@ -1,0 +1,17 @@
+E:\Registration\Registration.Repository\bin\Debug\net6.0\Registration.Repository.deps.json
+E:\Registration\Registration.Repository\bin\Debug\net6.0\Registration.Repository.runtimeconfig.json
+E:\Registration\Registration.Repository\bin\Debug\net6.0\Registration.Repository.dll
+E:\Registration\Registration.Repository\bin\Debug\net6.0\Registration.Repository.pdb
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.csproj.AssemblyReference.cache
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.AssemblyInfoInputs.cache
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.AssemblyInfo.cs
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.csproj.CoreCompileInputs.cache
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.dll
+E:\Registration\Registration.Repository\obj\Debug\net6.0\refint\Registration.Repository.dll
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.pdb
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.genruntimeconfig.cache
+E:\Registration\Registration.Repository\obj\Debug\net6.0\ref\Registration.Repository.dll
+E:\Registration\Registration.Repository\bin\Debug\net6.0\Registration.Datamodel.dll
+E:\Registration\Registration.Repository\bin\Debug\net6.0\Registration.Datamodel.pdb
+E:\Registration\Registration.Repository\obj\Debug\net6.0\Registration.Repository.csproj.CopyComplete

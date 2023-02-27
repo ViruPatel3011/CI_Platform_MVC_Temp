@@ -1,0 +1,14 @@
+E:\Registration\Registration.Datamodel\bin\Debug\net6.0\Registration.Datamodel.deps.json
+E:\Registration\Registration.Datamodel\bin\Debug\net6.0\Registration.Datamodel.runtimeconfig.json
+E:\Registration\Registration.Datamodel\bin\Debug\net6.0\Registration.Datamodel.dll
+E:\Registration\Registration.Datamodel\bin\Debug\net6.0\Registration.Datamodel.pdb
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.csproj.AssemblyReference.cache
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.GeneratedMSBuildEditorConfig.editorconfig
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.AssemblyInfoInputs.cache
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.AssemblyInfo.cs
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.csproj.CoreCompileInputs.cache
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.dll
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\refint\Registration.Datamodel.dll
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.pdb
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\Registration.Datamodel.genruntimeconfig.cache
+E:\Registration\Registration.Datamodel\obj\Debug\net6.0\ref\Registration.Datamodel.dll
