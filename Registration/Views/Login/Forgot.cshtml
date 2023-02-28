@@ -105,14 +105,14 @@
 
                 <div class="row ">
                     <div class="col-lg-12 ps-3">
-                        <form>
+                        <form method="post" asp-controller="Login" asp-action="Forgot">
                             <p style="margin-bottom: 2px;
                         font-size: 16px;
                         color: #414141; font-family:NotoSans-Light; align-items:left;">Email Address</p>
 
                             <input type="email" class="form-control" id="exampleInputEmail1"
                                    aria-describedby="emailHelp" placeholder="Enter Your email address">
-                            <button type="button" class="btn-login mt-4 ">  <a asp-controller="Login" asp-action="ResetPassword" style="text-decoration:none; color:#F88634">Reset my Password </a></button>
+                            <button type="submit" class="btn-login mt-4 ">  <a  style="text-decoration:none; color:#F88634">Reset my Password </a></button>
                         </form>
 
 
