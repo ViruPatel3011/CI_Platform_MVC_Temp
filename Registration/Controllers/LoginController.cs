@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Registration.Datamodel.DataModels;
 using Registration.Datamodel.ViewModels;
+using System.Net;
+using System.Net.Mail;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Registration.Controllers
 {
@@ -17,6 +21,8 @@ namespace Registration.Controllers
             _db = db;
         }
 
+
+       // Login Congtroller
         [HttpGet]
         public IActionResult Login()
         {
@@ -30,35 +36,123 @@ namespace Registration.Controllers
             var status = _db.Users.Where(x => x.Email == lvm.Email && x.Password == lvm.Password).FirstOrDefault();
                 if (status!=null)
             {
-                return RedirectToAction("Privacy","Home");
+                return RedirectToAction("LandingPage","Login");
             }
             else
             {
-                return RedirectToAction("Login");
+                TempData["Error Message"] = "Enter Correct details!";
             }
             return View();
         }
-        
+
+        [HttpGet]
+        public IActionResult LandingPage()
+        {
+            return View();
+        }
+
+
+        // Forgot Controller
+        [HttpGet]
+
         public IActionResult Forgot()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Forgot(LoginViewModel lvm)
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public IActionResult Forgot(ForgotViewModel fvm)
         {
-            var status = _db.Users.Where(x => x.Email == lvm.Email).FirstOrDefault();
-            if (status != null)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("ResetPassword","Login");
+                var user = _db.Users.FirstOrDefault(u => u.Email == fvm.Email);
+                if (user == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
+                // Generate a password reset token for the user
+                var token = Guid.NewGuid().ToString();
+
+
+
+                // Store the token in the password resets table with the user's email
+                var passwordReset = new PasswordReset
+                {
+                    Email = fvm.Email,
+                    Token = token
+                };
+
+
+                _db.PasswordResets.Add(passwordReset);
+                _db.SaveChanges();
+
+                // Send an email with the password reset link to the user's email address
+                var resetLink = Url.Action("ResetPassword", "Login", new { email = fvm.Email, token }, Request.Scheme);
+                // Send email to user with reset password link
+
+
+                var fromAddress = new MailAddress("pviral3011@gmail.com", "Sender Name");
+                var toAddress = new MailAddress(fvm.Email);
+                var subject = "Password reset request";
+                var body = $"Hi,<br /><br />Please click on the following link to reset your password:<br /><br /><a href='{resetLink}'>{resetLink}</a>";
+
+
+                var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body,
+                    IsBodyHtml = true
+                };
+
+                var smtpClient = new SmtpClient("smtp.gmail.com", 587)
+                {
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential("pviral3011@gmail.com", "xueamtwfugztnyzb"),
+                    EnableSsl = true
+                };
+                smtpClient.Send(message);
+
+                return RedirectToAction("ResetPassword", "Login");
             }
-            else
-            {
-                return RedirectToAction("Login");
-            }
+
             return View();
         }
 
+
+
+
+        /* public IActionResult Forgot()
+         {
+             return View();
+         }
+
+         [HttpPost]
+
+
+         public IActionResult Forgot(LoginViewModel lvm)
+         {
+             var status = _db.Users.Where(x => x.Email == lvm.Email).FirstOrDefault();
+             if (status != null)
+             {
+                 return RedirectToAction("ResetPassword", "Login");
+             }
+
+             return View();
+         }*/
+
+
+
+
+
+        /*  public IActionResult ForgotPasswordConfirmation()
+          {
+              return View();
+          }*/
+
+        // Registration Congtroller
         [HttpGet]
         public IActionResult Registration()
         {
@@ -66,9 +160,11 @@ namespace Registration.Controllers
             return View();
         }
 
+
+        
         [HttpPost]
         [Route("/Login/Registration", Name ="Register")]
-        public IActionResult Registration(User obj)
+        public IActionResult Registration(RegistrationViewModel obj)
         {
             var User_data = new User()
             {
@@ -86,8 +182,10 @@ namespace Registration.Controllers
             return RedirectToAction("Login");
 
         }
-        
 
+
+
+        // ResetPassword Congtroller
         public IActionResult ResetPassword()
         {
             return View();

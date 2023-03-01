@@ -1,0 +1,1320 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/LandingPage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <title>Landing Page </title>
+</head>
+
+<body>
+    <section class="main">
+
+
+        <!-- First navbar  -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container">
+                <div id="navigation-bar">
+                    <button class="navbar-toggler border-0" href="#menubar" role="button" data-bs-toggle="offcanvas"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                            id="navbar-toggler-btn">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="menubar" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <li class="navbar-nav nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Stories</a>
+                            </li>
+                            <li class="navbar-nav nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Privacy
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Volunteering</a></li>
+                                    <li><a class="dropdown-item" href="#">Sponsered</a></li>
+
+                                </ul>
+                            </li>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+                <div id="navigation-bar">
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./Assets/user-img.png" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                                     loading="lazy" />
+                                Evan Donohue
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="#">My Account</a></li>
+                                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                                <li><a class="dropdown-item" href="#">LogOut</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Second Row for Search mission  -->
+        <div class="navbar-expand-md container-fluid border-top border-bottom bg-light px-0">
+            <div class="row container mx-auto px-0">
+                <div class="col-10 col-md-5 py-2">
+                    <form class="d-flex mx-5">
+                        <img src="./Assets/search.png" id="search-icon" height="20" width="20" class="mt-2">
+                        <input class="form-control me-2 border-0 bg-light" type="search" placeholder="Search mission..."
+                               aria-label="Search">
+                    </form>
+                </div>
+                <button class="col-auto navbar-toggler border-0 text-end" href="#filters" role="button"
+                        data-bs-toggle="offcanvas" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation" id="navbar-toggler-btn">
+                    <img src="./Assets/filter.png" alt="">
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="filters" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filters</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+
+                        <!-- Country Section  -->
+                        <div class="col-auto py-2 px-2 mx-auto searchByFilter">
+                            <ul class="navbar-nav" style="--bs-scroll-height: 100px;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Country
+                                    </a>
+                                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li><a class="dropdown-item" href="#">Afghanistan</a></li>
+                                        <li><a class="dropdown-item" href="#">Albania</a></li>
+                                        <li><a class="dropdown-item" href="#">Algeria</a></li>
+                                        <li><a class="dropdown-item" href="#">Barbados</a></li>
+                                        <li><a class="dropdown-item" href="#">Belarus</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                        <li><a class="dropdown-item" href="#">Belgium</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- City Section  -->
+                        <div class="col-auto py-2 px-2 mx-auto searchByFilter">
+                            <ul class="navbar-nav" style="--bs-scroll-height: 100px;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        City
+                                    </a>
+                                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Afghanistan" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Afghanistan
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Albania" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Albania
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Algeria" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Algeria
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Barbados" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Barbados
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Belarus" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Belarus
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Belgium" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Belgium
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="New York" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            New York
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="India" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            India
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="London" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            London
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="USA" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            USA
+                                        </label>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Theme Section  -->
+                        <div class="col-auto py-2 px-2 mx-auto searchByFilter">
+                            <ul class="navbar-nav" style="--bs-scroll-height: 100px;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Theme
+                                    </a>
+                                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme1" id="flexCheckDefault">
+                                        <label class="form-check-label " for="flexCheckDefault">
+                                            Theme1
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme2" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme2
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme3" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme3
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme4" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme4
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme5" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme5
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme6" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme6
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme7" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme7
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme8" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme8
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme9" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme9
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme10" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Theme10
+                                        </label>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Skills Section  -->
+                        <div class="col-auto py-2 px-2 mx-auto searchByFilter">
+                            <ul class="navbar-nav" style="--bs-scroll-height: 100px;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Skills
+                                    </a>
+                                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills1" id="flexCheckDefault">
+                                        <label class="form-check-label " for="flexCheckDefault">
+                                            Skills1
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills2" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills2
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills3" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills3
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills4" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills4
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Theme5" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills5
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills6" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills6
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills7" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills7
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills8" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills8
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills9" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills9
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input checkbox ms-2" type="checkbox" value="Skills10" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Skills10
+                                        </label>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Filter Mission  -->
+        <!-- <div class=" container" id="selected-filters"> -->
+        <!-- <ul class="d-flex mt-2 " style="list-style: none;">
+          <li class="items d-flex border px-2 ms-2">
+            <p style="font-size: 12px;">Tree Plantation</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Canada</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Toronto</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Montreal</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Environmrnt</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Nutrition</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Anthropology</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 border">
+            <p style="font-size: 12px;">Environmental Science</p>
+            <img src="./Assets/cancel.png" alt="" width="10px" height="10px" class="mt-1 ps-1">
+          </li>
+          <li class="items d-flex ms-3 px-2 ">
+            <p style="font-size: 12px;">Clear all</p>
+
+          </li>
+
+        </ul> -->
+        <!-- </div> -->
+
+        <div class="filters-section d-flex align-items-center flex-wrap justify-content-start" style="padding-left: 130px ;">
+        </div>
+
+
+    </section>
+
+
+
+    <!-- Explore Mission View  -->
+
+    <div class="row container mx-auto mb-2">
+
+        <div class="col-lg-10 my-auto">
+            <p class="mb-0 ps-4 fs-4">Explore <strong>72 missions</strong></p>
+        </div>
+
+        <div class="col-lg-1 d-none d-lg-block">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle text-dark bg-transparent" type="button" id="dropdownMenuButton1"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort By
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Newest</a></li>
+                    <li><a class="dropdown-item" href="#">Oldest</a></li>
+                    <li><a class="dropdown-item" href="#">Lowest available seats</a></li>
+                    <li><a class="dropdown-item" href="#">Highest available seats</a></li>
+                    <li><a class="dropdown-item" href="#">Sort by my favourite</a></li>
+                    <li><a class="dropdown-item" href="#">Sort by deadline</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Grid and List view icon  -->
+
+        <div class="col-lg-1 d-none d-lg-block">
+            <a href="" class="grid rounded-circle btn-grid">
+                <img src="./Assets/grid.png" class="mt-2 ms-1" id="gridimg"
+                     alt="Image can't loaded" srcset="">
+            </a>
+            <a href="" class="list rounded-circle btn-list">
+                <img src="./Assets/list.png" class="ms-2 " id="listimg"
+                     alt="Image can't loaded" srcset="">
+            </a>
+        </div>
+
+    </div>
+
+
+
+    <!-- Card Start  1 to 6 -->
+    <div class="container grid-container">
+        <div class="row">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 1 Upper Body  -->
+                    <div class="position-relative">
+                        <img src="./Assets/Grow-Trees-On-the-path-to-environment-sustainability.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Toronto
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Environment
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 1 Body  -->
+                    <div class="card-body">
+                        <h5 class="card-title">Grow Trees On the path to <br> environment sustainability</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">Tree Canada</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    From 10/01/2019 untill
+                                    25/02/2019
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">10</h5>
+                                    <p class="mb-0">Seats left</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/deadline.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">09/01/2019</h5>
+                                    <p class="mb-0">Deadline</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 1 Button  -->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 2 Upper Body  -->
+                    <div class="position-relative">
+                        <img src="./Assets/Education-Supplies-for-Every--Pair-of-Shoes-Sold.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Melbourne
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Children
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 2 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Education Supplies for Every <br> Pair of Shoes Sold</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">Australian Paradise</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    From 10/01/2019 untill
+                                    25/02/2019
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Already-volunteered.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">250</h5>
+                                    <p class="mb-0">Already volunteered</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/deadline.png " width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">09/01/2019</h5>
+                                    <p class="mb-0">Deadline</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card 2 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+
+                    <!-- Card 3 Upper Body  -->
+                    <div class="position-relative">
+                        <img src="./Assets/Nourish-the-Children-in--African-country.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Barcelona
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Nutrition
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 3 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Nourish the Children in <br> African country</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">The Hunger</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    Ongoing Opportunity
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">10</h5>
+                                    <p class="mb-0">Seats left</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/deadline.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">09/01/2019</h5>
+                                    <p class="mb-0">Deadline</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 4 Upper body -->
+                    <div class="position-relative">
+                        <img src="./Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            London
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Environment
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 4 body-->
+                    <div class="card-body">
+                        <h5 class="card-title">CSR initiative stands for Coffee <br> and Farmer Equity</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">CSE network</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    Ongoing Opportunity
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Already-volunteered.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">250</h5>
+                                    <p class="mb-0">Already volunteered</p>
+                                </div>
+                            </div>
+                            <!-- <div class="d-flex align-items-center">
+                              <div class=" mt-1 me-2 mx-auto">
+                                <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                              </div>
+                              <div class=" px-0">
+                                <h5 class="mb-0 mt-1">10</h5>
+                                <p class="mb-0">Seats left</p>
+                              </div>
+                            </div> -->
+
+                        </div>
+
+                        <!-- Card 4 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Card 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 5 Upper Body  -->
+                    <div class="position-relative">
+                        <img src="./Assets/Animal-welfare-&-save-birds-campaign.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Cape Town
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Animals
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 5 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Animal welfare & save birds <br> campaign</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">JR Foundation</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    Plant 10,000 Trees
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">10</h5>
+                                    <p class="mb-0">Seats left</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/achieved.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                                             aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mb-0">8000 achieved</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card 2 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 6 Upper Body-->
+                    <div class="position-relative">
+                        <img src="./Assets/Plantation-and-Afforestation-programme.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Paris
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Environment
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Plantation and Afforestation <br> programme</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">Amaze Doctors</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute " id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    Plant 10,000 Trees
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/achieved.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                                             aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="mb-0">8000 achieved</p>
+                                </div>
+                            </div>
+                            <!-- <div class="d-flex align-items-center">
+                              <div class=" mt-1 me-2 mx-auto">
+                                <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                              </div>
+                              <div class=" px-0">
+                                <h5 class="mb-0 mt-1">10</h5>
+                                <p class="mb-0">Seats left</p>
+                              </div>
+                            </div> -->
+                        </div>
+
+                        <!-- Card 6 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Card start 7-8-9 -->
+    <div class="container grid-container">
+        <div class="row">
+
+
+            <!-- Card 7-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 7 Upper Body-->
+                    <div class="position-relative">
+                        <img src="./Assets/Grow-Trees-On-the-path-to-environment-sustainability.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            New York
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Education
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 7 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Grow Trees On the path to <br> environment sustainability</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea odit omnis illo, a cum
+                            recusandae cupiditate,<br> doloremque optio asperiores, amet reprehenderit numquam. Ipsa quisquam hic
+                            nostrum eum tempora<br> dolor fugit, eius esse debitis ex quo perferendis qui consectetur eligendi illo!
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">Tree Canada</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <!-- <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                          <div class="text-center position-absolute" id="mission-deadline">
+                            <p style="border: 1px solid gray;border-radius: 20px;">From 10/01/2019 untill 25/02/2019
+                            </p>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <div class=" mt-1 me-2 mx-auto">
+                              <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                            </div>
+                            <div class=" px-0">
+                              <h5 class="mb-0 mt-1">10</h5>
+                              <p class="mb-0">Seats left</p>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <div class=" mt-1 me-2 mx-auto">
+                              <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                            </div>
+                            <div class=" px-0">
+                              <h5 class="mb-0 mt-1">10</h5>
+                              <p class="mb-0">Seats left</p>
+                            </div>
+                          </div>
+                        </div> -->
+                        <!-- Card 7 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <!-- Card 8 Upper body-->
+                    <div class="position-relative">
+                        <img src="./Assets/Education-Supplies-for-Every--Pair-of-Shoes-Sold.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Sydney
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Children
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 8 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Education Supplies for Every <br> Pair of Shoes Sold</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">Tree Canada</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    From 10/01/2019 untill
+                                    25/02/2019
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">250</h5>
+                                    <p class="mb-0">Already volunteered</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/deadline.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">09/01/2019</h5>
+                                    <p class="mb-0">Deadline</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card 8 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 9 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+
+                    <!-- Card 9 Upper body -->
+                    <div class="position-relative">
+                        <img src="./Assets/Nourish-the-Children-in--African-country.png" class="card-img-top" alt="...">
+
+                        <div class="position-absolute c1-location px-2 py-1">
+                            <img src="./Assets/pin.png" alt="">
+                            Berlin
+                        </div>
+                        <div class="position-absolute c1-heart px-2 py-1">
+                            <img src="./Assets/heart.png" alt="">
+                        </div>
+                        <div class="position-absolute c1-person px-2 py-1">
+                            <img src="./Assets/user.png" alt="">
+                        </div>
+                        <div class="text-center position-absolute" id="mission-theme">
+                            <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">
+                                Nutrition
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 9 Body-->
+                    <div class="card-body">
+                        <h5 class="card-title">Nourish the Children in <br> African country</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                            dolore
+                            autem vel?
+                        </p>
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <div class="mt-1">
+                                <p class="rateData ms-3 mb-0">Junior Charity</p>
+                            </div>
+
+                            <div class="d-flex  align-items-center">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/selected-star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                                <img src="./Assets/star.png" class="star" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between position-relative border-top border-bottom py-4">
+                            <div class="text-center position-absolute" id="mission-deadline">
+                                <p style="border: 1px solid gray;border-radius: 20px;" class="ps-1 pe-1">
+                                    From 10/01/2019 untill
+                                    25/02/2019
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/Seats-left.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">10</h5>
+                                    <p class="mb-0">Seats left</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class=" mt-1 me-2 mx-auto">
+                                    <img src="./Assets/deadline.png" width="25px" height="25px" alt="">
+                                </div>
+                                <div class=" px-0">
+                                    <h5 class="mb-0 mt-1">09/01/2019</h5>
+                                    <p class="mb-0">Deadline</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card 9 Button-->
+                        <div class="card-footer text-center">
+                            <a href="MissonAndRating.html">
+                                <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
+              color: #F88634;">
+                                    Apply <img src="./Assets/right-arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Pagination start  -->
+    <div class="row mt-4">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item me-2">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <img src="./Assets/previous.png" alt="" srcset="">
+                    </a>
+                </li>
+                <li class="page-item me-2">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <img src="./Assets/left.png" alt="">
+                    </a>
+                </li>
+                <li class="page-item active me-2"><a class="page-link" href="#">1</a></li>
+                <li class="page-item  me-2"><a class="page-link" href="#">2</a></li>
+                <li class="page-item me-2"><a class="page-link" href="#">3</a></li>
+                <li class="page-item me-2"><a class="page-link" href="#">4</a></li>
+                <li class="page-item me-2"><a class="page-link" href="#">5</a></li>
+                <li class="page-item me-2">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <img src="./Assets/right-arrow1.png" alt="" srcset="">
+                    </a>
+                </li>
+                <li class="page-item me-2">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <img src="./Assets/next.png" alt="" srcset="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- footer start  -->
+    <div class="copyright mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms of Use</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 rights">
+                    <span> © 2019 Optimy.com. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="./JS/LandingPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez"></script>
+</body>
+
+</html>

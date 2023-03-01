@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mXZsONf8siwQ6PRn1CaG2OB1MJYds1ZTnmSKYZE/tSI=",
+  "Hash": "LTGfAqQRFbrruW6jYeP/o7dCQ+2uhBADxTrc6+W1KKs=",
   "Source": "Registration",
   "BasePath": "_content/Registration",
   "Mode": "Default",
@@ -1904,6 +1904,23 @@
       "OriginalItemSpec": "wwwroot\\css\\forgot.css"
     },
     {
+      "Identity": "E:\\Registration\\Registration\\wwwroot\\css\\LandingPage.css",
+      "SourceId": "Registration",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Registration\\Registration\\wwwroot\\",
+      "BasePath": "_content/Registration",
+      "RelativePath": "css/LandingPage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LandingPage.css"
+    },
+    {
       "Identity": "E:\\Registration\\Registration\\wwwroot\\css\\login.css",
       "SourceId": "Registration",
       "SourceType": "Discovered",
@@ -1987,6 +2004,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\Registration\\Registration\\wwwroot\\js\\LandingPage.js",
+      "SourceId": "Registration",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Registration\\Registration\\wwwroot\\",
+      "BasePath": "_content/Registration",
+      "RelativePath": "js/LandingPage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\LandingPage.js"
     },
     {
       "Identity": "E:\\Registration\\Registration\\wwwroot\\js\\site.js",

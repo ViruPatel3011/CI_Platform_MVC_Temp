@@ -1,4 +1,4 @@
-﻿@model Registration.Datamodel.DataModels.User
+﻿@model RegistrationViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,37 +86,42 @@
                     
                         <div class="mb-2">
                             <label for="exampleInputiFrstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" asp-for="FirstName" placeholder="evan">
-                            @*<span asp-validation-for="FirstName" class="text-danger"></span>*@
+                            <input type="text" class="form-control" asp-for="FirstName" placeholder="evan" onkeyup="emptyemaill()">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputLastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" asp-for="LastName" placeholder="donohue">
+                            <input type="text" class="form-control" asp-for="LastName" placeholder="donohue" onkeyup="emptyemaill()">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputContact" class="form-label">Phone Number</label>
-                            <input type="text" class="form-control" asp-for="PhoneNumber" placeholder="8923454615">
+                            <input type="text" class="form-control" asp-for="PhoneNumber" placeholder="8923454615" onkeyup="emptyemaill()">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" asp-for="Email" placeholder="evan.donohue@gmail.com">
+                            <input type="email" class="form-control" asp-for="Email" placeholder="evan.donohue@gmail.com" >
+                            <span asp-validation-for="Email" class="text-danger" id="requieredfiledemail"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" asp-for="Password" placeholder="" value=".......">
+                            <input type="password" class="form-control" id="exampleInputPassword1" asp-for="Password" placeholder="" value="......." onkeyup="emptyemaill()">
+                            <span asp-validation-for="Password" class="text-danger" id="requieredfiledpas"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="" value=".......">
+                            <input type="password" class="form-control" id="exampleInputPassword2" asp-for="Password" placeholder="" value="......." onfocusout="passwordvalidate()" onkeyup="emptyemaill()">
+                            <span class="text-danger" style="display:none;" id="passconferr">Password and Confirm Password must be same </span>
                             
                           </div>
 
-                        <button type="submit" class="btn rounded-pill btn-login mt-4  " style="border:2px solid #F88634;color:#F88634">Register</button>
+                        <button type="submit" class="btn rounded-pill btn-login mt-4 " id="reg-btn" style="border:2px solid #F88634;color:#F88634">Register</button>
 
                           <div class="row mt-2">
                             <div class="col-lg-12 text-center">
@@ -149,3 +154,34 @@
 </body>
 
 </html>
+
+@section scripts{
+@{
+    <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+<script>
+    function emptyemaill() {
+       // document.getElementById("alredyreg").style.display = "none";
+        document.getElementById("passconferr").style.display = "none";
+        document.getElementById("requieredfiledefn").style.display = "none";
+        document.getElementById("requieredfiledepn").style.display = "none";
+        document.getElementById("requieredfiledpas").style.display = "none";
+    }
+
+    function passwordvalidate() {
+        var a = document.getElementById("exampleInputPassword1").value;
+        var b = document.getElementById("exampleInputPassword2").value;
+        var c = document.getElementById("passconferr");
+        if (a != b) {
+            var submitButton = document.getElementById("reg-btn");
+            submitButton.disabled = true;
+            c.style.display = "block";
+        }
+        else {
+            var submitButton = document.getElementById("reg-btn");
+            submitButton.disabled = false;
+        }
+    }
+</script>

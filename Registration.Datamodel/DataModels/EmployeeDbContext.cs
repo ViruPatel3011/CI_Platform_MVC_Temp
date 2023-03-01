@@ -635,9 +635,8 @@ public partial class EmployeeDbContext : DbContext
 
         modelBuilder.Entity<PasswordReset>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("password_reset");
+            entity.HasKey(e => e.Token).HasName("PK_password_reset");
+            entity.ToTable("password_reset");
 
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")

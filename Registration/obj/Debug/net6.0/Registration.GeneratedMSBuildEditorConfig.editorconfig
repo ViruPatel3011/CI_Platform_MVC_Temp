@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Registration/Registration/Views/Login/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmRDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Registration/Registration/Views/Login/LandingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTGFuZGluZ1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Registration/Registration/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -437,6 +437,10 @@
       "PackagePath": "staticwebassets\\Assets\\xlsx.png"
     },
     {
+      "Id": "E:\\Registration\\Registration\\wwwroot\\css\\LandingPage.css",
+      "PackagePath": "staticwebassets\\css\\LandingPage.css"
+    },
+    {
       "Id": "E:\\Registration\\Registration\\wwwroot\\css\\forgot.css",
       "PackagePath": "staticwebassets\\css\\forgot.css"
     },
@@ -459,6 +463,10 @@
     {
       "Id": "E:\\Registration\\Registration\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Registration\\Registration\\wwwroot\\js\\LandingPage.js",
+      "PackagePath": "staticwebassets\\js\\LandingPage.js"
     },
     {
       "Id": "E:\\Registration\\Registration\\wwwroot\\js\\site.js",
