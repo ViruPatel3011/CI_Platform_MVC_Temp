@@ -469,6 +469,10 @@
       "PackagePath": "staticwebassets\\js\\LandingPage.js"
     },
     {
+      "Id": "E:\\Registration\\Registration\\wwwroot\\js\\popper.js",
+      "PackagePath": "staticwebassets\\js\\popper.js"
+    },
+    {
       "Id": "E:\\Registration\\Registration\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

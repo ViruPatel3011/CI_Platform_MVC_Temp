@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LTGfAqQRFbrruW6jYeP/o7dCQ+2uhBADxTrc6+W1KKs=",
+  "Hash": "svcUyM4fXyYO0jP1uB0vboXWPgOY8D/Zg1BpiJbTTOw=",
   "Source": "Registration",
   "BasePath": "_content/Registration",
   "Mode": "Default",
@@ -2021,6 +2021,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\LandingPage.js"
+    },
+    {
+      "Identity": "E:\\Registration\\Registration\\wwwroot\\js\\popper.js",
+      "SourceId": "Registration",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Registration\\Registration\\wwwroot\\",
+      "BasePath": "_content/Registration",
+      "RelativePath": "js/popper.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\popper.js"
     },
     {
       "Identity": "E:\\Registration\\Registration\\wwwroot\\js\\site.js",

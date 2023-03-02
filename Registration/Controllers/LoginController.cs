@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Registration.Datamodel.DataModels;
 using Registration.Datamodel.ViewModels;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Claims;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Registration.Controllers
@@ -36,10 +39,23 @@ namespace Registration.Controllers
             var status = _db.Users.Where(x => x.Email == lvm.Email && x.Password == lvm.Password).FirstOrDefault();
                 if (status!=null)
             {
+                var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Email, status.Email) },
+                        CookieAuthenticationDefaults.AuthenticationScheme);
+                identity.AddClaim(new Claim(ClaimTypes.Name, status.FirstName));
+                identity.AddClaim(new Claim(ClaimTypes.Name, status.LastName));
+                var principal = new ClaimsPrincipal(identity);
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                HttpContext.Session.SetString("EmailId", status.Email);
                 return RedirectToAction("LandingPage", "Login");
             }
             TempData["Error Message"] = "Enter Correct details!";
             return View();
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.Session.Clear();
+            return RedirectToAction("LandingPage", "Login");
         }
 
         [HttpGet]
