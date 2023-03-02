@@ -10,7 +10,7 @@ namespace Registration.Datamodel.ViewModels
     public class ForgotViewModel
     {
 
-        [Required]
+        [Required(ErrorMessage ="Enter Email Address")]
         [EmailAddress]
         public string Email { get; set; }
     }

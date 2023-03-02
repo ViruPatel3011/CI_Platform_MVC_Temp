@@ -36,7 +36,7 @@ namespace Registration.Controllers
             var status = _db.Users.Where(x => x.Email == lvm.Email && x.Password == lvm.Password).FirstOrDefault();
                 if (status!=null)
             {
-                return RedirectToAction("LandingPage","Login");
+                return RedirectToAction("LandingPage", "Login");
             }
             TempData["Error Message"] = "Enter Correct details!";
             return View();
@@ -67,7 +67,7 @@ namespace Registration.Controllers
                 var user = _db.Users.FirstOrDefault(u => u.Email == fvm.Email);
                 if (user == null)
                 {
-                    TempData["Error"] = "email id is invalid";
+                    TempData["Error"] = "Email id is invalid";
                     //return RedirectToAction("Login", "Login");
                     return View();
                 }
@@ -93,7 +93,7 @@ namespace Registration.Controllers
                 // Send email to user with reset password link
 
 
-                var fromAddress = new MailAddress("pviral3011@gmail.com", "Sender Name");
+                var fromAddress = new MailAddress("pviral3011@gmail.com", "Viral Patel");
                 var toAddress = new MailAddress(fvm.Email);
                 var subject = "Password reset request";
                 var body = $"Hi,<br /><br />Please click on the following link to reset your password:<br /><br /><a href='{resetLink}'>{resetLink}</a>";

@@ -86,37 +86,37 @@
                     
                         <div class="mb-2">
                             <label for="exampleInputiFrstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" asp-for="FirstName" placeholder="evan" onkeyup="emptyemaill()">
+                            <input type="text" class="form-control" asp-for="FirstName" placeholder="evan" onkeyup="emptydata()">
                             <span asp-validation-for="FirstName" class="text-danger"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputLastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" asp-for="LastName" placeholder="donohue" onkeyup="emptyemaill()">
+                            <input type="text" class="form-control" asp-for="LastName" placeholder="donohue" onkeyup="emptydata()">
                             <span asp-validation-for="LastName" class="text-danger"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputContact" class="form-label">Phone Number</label>
-                            <input type="text" class="form-control" asp-for="PhoneNumber" placeholder="8923454615" onkeyup="emptyemaill()">
+                            <input type="text" class="form-control" asp-for="PhoneNumber" placeholder="8923454615" pattern="^[6-9]{1}[0-9]{9}$" onkeyup="emptydata()">
                             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" asp-for="Email" placeholder="evan.donohue@gmail.com" >
+                            <input type="email" class="form-control" asp-for="Email" placeholder="evan.donohue@gmail.com" onkeyup="emptydata()">
                             <span asp-validation-for="Email" class="text-danger" id="requieredfiledemail"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" asp-for="Password" placeholder="" value="......." onkeyup="emptyemaill()">
+                            <input type="password" class="form-control" id="exampleInputPassword1" asp-for="Password" placeholder="" value="......." onkeyup="emptydata()">
                             <span asp-validation-for="Password" class="text-danger" id="requieredfiledpas"></span>
                             
                           </div>
                         <div class="mb-2">
                             <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword2" asp-for="Password" placeholder="" value="......." onfocusout="passwordvalidate()" onkeyup="emptyemaill()">
+                            <input type="password" class="form-control" id="exampleInputPassword2" asp-for="Password" placeholder="" value="......." onfocusout="passwordvalidate()" onkeyup="emptydata()">
                             <span class="text-danger" style="display:none;" id="passconferr">Password and Confirm Password must be same </span>
                             
                           </div>
@@ -162,7 +162,7 @@
 }
 
 <script>
-    function emptyemaill() {
+    function emptydata() {
        // document.getElementById("alredyreg").style.display = "none";
         document.getElementById("passconferr").style.display = "none";
         document.getElementById("requieredfiledefn").style.display = "none";
