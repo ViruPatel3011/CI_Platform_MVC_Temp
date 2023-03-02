@@ -22,11 +22,11 @@ namespace Registration.Controllers
         }
 
 
-       // Login Congtroller
+       // Login Congtroller_________________
         [HttpGet]
         public IActionResult Login()
         {
-            LoginViewModel lvm = new LoginViewModel();
+            /*LoginViewModel lvm = new LoginViewModel();*/
             return View();
         }
 
@@ -38,10 +38,7 @@ namespace Registration.Controllers
             {
                 return RedirectToAction("LandingPage","Login");
             }
-            else
-            {
-                TempData["Error Message"] = "Enter Correct details!";
-            }
+            TempData["Error Message"] = "Enter Correct details!";
             return View();
         }
 
@@ -52,7 +49,7 @@ namespace Registration.Controllers
         }
 
 
-        // Forgot Controller
+        // ______________________________Forgot Controller_______________________________
         [HttpGet]
 
         public IActionResult Forgot()
@@ -70,7 +67,9 @@ namespace Registration.Controllers
                 var user = _db.Users.FirstOrDefault(u => u.Email == fvm.Email);
                 if (user == null)
                 {
-                    return RedirectToAction("Login", "Login");
+                    TempData["Error"] = "email id is invalid";
+                    //return RedirectToAction("Login", "Login");
+                    return View();
                 }
 
                 // Generate a password reset token for the user
@@ -115,7 +114,7 @@ namespace Registration.Controllers
                 };
                 smtpClient.Send(message);
 
-                return RedirectToAction("ResetPassword", "Login");
+                return RedirectToAction("Login", "Login");
             }
 
             return View();
@@ -152,7 +151,7 @@ namespace Registration.Controllers
               return View();
           }*/
 
-        // Registration Congtroller
+        //____________________ Registration Congtroller_____________
         [HttpGet]
         public IActionResult Registration()
         {
@@ -185,9 +184,30 @@ namespace Registration.Controllers
 
 
 
-        // ResetPassword Congtroller
-        public IActionResult ResetPassword()
+        // ____________________ResetPassword Controller_________________
+        public IActionResult ResetPassword(string Email,string Token)
         {
+            var status = _db.PasswordResets.FirstOrDefault(m => m.Email == Email && m.Token == Token);
+            if (status != null) { 
+                var ResetPass= new ResetPasswordViewModel { 
+                    Email = Email, 
+                    Token = Token 
+                };
+                return View(ResetPass);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ResetPassword(ResetPasswordViewModel rpm)
+        {
+            var user = _db.Users.FirstOrDefault(m => m.Email == rpm.Email );
+            if (user != null)
+            {
+               user.Password=rpm.Password;
+                _db.SaveChanges();
+                return RedirectToAction("Login", "Login");
+            }
             return View();
         }
     }

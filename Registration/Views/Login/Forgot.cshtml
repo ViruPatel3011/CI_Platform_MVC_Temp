@@ -110,6 +110,7 @@
                         font-size: 16px;
                         color: #414141; font-family:NotoSans-Light; align-items:left;">Email Address</p>
 
+                            <p class="text-danger">@TempData["Error"]</p>
                             <input type="email" class="form-control" asp-for="Email" id="exampleInputEmail1"
                                    aria-describedby="emailHelp" placeholder="Enter Your email address">
                                    @*<span asp-validation-for="Email" class="text-danger"></span>*@
