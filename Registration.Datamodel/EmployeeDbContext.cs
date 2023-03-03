@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Registration.Datamodel.DataModels;
 
-namespace Registration.Datamodel.DataModels;
+namespace Registration.Datamodel;
 
 public partial class EmployeeDbContext : DbContext
 {
@@ -68,6 +69,8 @@ public partial class EmployeeDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+
         modelBuilder.Entity<Admin>(entity =>
         {
             entity.HasKey(e => e.AdminId).HasName("PK__admin__43AA41419514AC05");

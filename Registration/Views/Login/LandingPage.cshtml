@@ -402,16 +402,13 @@
     <div class="container grid-container">
         <div class="row">
 
-            @foreach(var data in Model)
-            {
-                if(data.MissionType=="Time")
-                {
-                    <!-- Time based mission  -->
+           
+                    <!-- Theme based mission  -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
 
 
-                            <!-- Time based mission  Upper Body  -->
+                            <!-- Theme based mission  Upper Body  -->
                             <div class="position-relative">
                                 <img src="~/Assets/Nourish-the-Children-in--African-country.png" class="card-img-top" alt="...">
 
@@ -433,7 +430,7 @@
                             </div>
 
 
-                            <!-- Time based mission  Body-->
+                            <!-- Theme based mission  Body-->
                             <div class="card-body">
                                 <h5 class="card-title">Nourish the Children in <br> African country</h5>
                                 <p class="card-text">
@@ -481,9 +478,9 @@
                                     </div>
                                 </div>
 
-                                <!-- Time based mission button-->
+                                <!-- Theme based mission button-->
                                 <div class="card-footer text-center">
-                                    <a asp-controller="Login" asp-action="MissionAndRating">
+                                    <a href="MissonAndRating.html">
                                         <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
               color: #F88634;">
                                             Apply <img src="~/Assets/right-arrow.png" alt="">
@@ -494,10 +491,7 @@
                         </div>
                     </div>
 
-                }
-
-                else if(data.MissionType=="Goal")
-                {
+               
                     <!-- Goal based Mission -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
@@ -508,7 +502,7 @@
 
                                 <div class="position-absolute c1-location px-2 py-1">
                                     <img src="~/Assets/pin.png" alt="">
-                                   @data.City
+                                    Cape Town
                                 </div>
                                 <div class="position-absolute c1-heart px-2 py-1">
                                     <img src="~/Assets/heart.png" alt="">
@@ -526,14 +520,16 @@
 
                             <!--  Goal based Mission Body-->
                             <div class="card-body">
-                                <h5 class="card-title">@data.Title</h5>
+                                <h5 class="card-title">Animal welfare & save birds <br> campaign</h5>
                                 <p class="card-text">
-                                   @data.ShortDescription
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium quam, at
+                                    dolore
+                                    autem vel?
                                 </p>
                                 <div class="d-flex justify-content-between mb-3">
 
                                     <div class="mt-1">
-                                        <p class="rateData ms-3 mb-0">@data.OrganizationName</p>
+                                        <p class="rateData ms-3 mb-0">JR Foundation</p>
                                     </div>
 
                                     <div class="d-flex  align-items-center">
@@ -576,7 +572,7 @@
 
                                 <!--  Goal based Mission Button-->
                                 <div class="card-footer text-center">
-                                    <a asp-controller="Login" asp-action="MissionAndRating">
+                                    <a href="MissonAndRating.html">
                                         <button type="button" class="btn  rounded-pill" style="border: 2px solid #F88634;
               color: #F88634;">
                                             Apply <img src="~/Assets/right-arrow.png" alt="">
@@ -586,8 +582,7 @@
                             </div>
                         </div>
                     </div>
-                }
-            }
+                
 
            
 

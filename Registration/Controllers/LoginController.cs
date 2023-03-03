@@ -9,6 +9,8 @@ using System.Net;
 using System.Net.Mail;
 using System.Security.Claims;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Registration.Datamodel;
+
 
 namespace Registration.Controllers
 {
@@ -67,13 +69,15 @@ namespace Registration.Controllers
         [AllowAnonymous]
         public IActionResult LandingPage()
         {
-            List<Mission> missions = _db.Missions.ToList();  
-            foreach(var mission in missions)
+            /*List<Mission> missions = _db.Missions.ToList();*/
+            /*foreach (var mission in missions)
             {
                 _db.Entry(mission).Reference(c => c.City).Load();
                 _db.Entry(mission).Reference(t => t.MissionTheme).Load();
-            }
-            return View(missions);
+            }*/
+            /*return View(missions);*/
+            return View();
+            
         }
 
         [HttpGet]
@@ -143,7 +147,7 @@ namespace Registration.Controllers
                 var smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
                     UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential("pviral3011@gmail.com", "xueamtwfugztnyzb"),
+                    Credentials = new NetworkCredential("harahapatel1512@gmail.com", "oupjhmydnlsycsak"),
                     EnableSsl = true
                 };
                 smtpClient.Send(message);
@@ -202,7 +206,17 @@ namespace Registration.Controllers
             var validEmail = _db.Users.FirstOrDefault(u => u.Email == user.Email);
             if (validEmail == null)
             {
-                _db.Users.Add(user);
+                var User_data = new User()
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    Password = user.Password,
+                    CityId = 2,
+                    CountryId = 1
+                };
+                _db.Users.Add(User_data);
                 _db.SaveChanges();
                 return RedirectToAction("Login", "Login");
             }
@@ -211,16 +225,7 @@ namespace Registration.Controllers
                 TempData["Error"] = "Email is already Exist";
                 return View();
             }
-                //var User_data = new User()
-                //{
-                //    FirstName = obj.FirstName,
-                //    LastName = obj.LastName,
-                //    Email = obj.Email,
-                //    PhoneNumber = obj.PhoneNumber,
-                //    Password = obj.Password,
-                //    CityId = 2,
-                //    CountryId = 1
-                //};
+                
 
             //_db.Users.Add(User_data);
             //_db.SaveChanges();
