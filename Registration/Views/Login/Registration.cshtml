@@ -1,4 +1,4 @@
-﻿@model RegistrationViewModel
+﻿@model Registration.Datamodel.DataModels.User
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +83,7 @@
 
                 <div class="row p-4">
 
-                    
+                        <p class="text-danger"> @TempData["Error"]</p>
                         <div class="mb-2">
                             <label for="exampleInputiFrstName" class="form-label">First Name</label>
                             <input type="text" class="form-control" asp-for="FirstName" placeholder="evan" onkeyup="emptydata()">

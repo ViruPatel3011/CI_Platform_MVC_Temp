@@ -39,10 +39,15 @@ namespace Registration.Controllers
             var status = _db.Users.Where(x => x.Email == lvm.Email && x.Password == lvm.Password).FirstOrDefault();
                 if (status!=null)
             {
+
+                /*This ClaimsIdentity method provides user information automatically so applications do not need to request it of
+                the user and the user doesn't have to provide that information separately for different applications.*/
                 var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Email, status.Email) },
-                        CookieAuthenticationDefaults.AuthenticationScheme);
+                        CookieAuthenticationDefaults.AuthenticationScheme); 
+                /*CookieAuthenticationDefaults.AuthenticationScheme provides “Cookies” for the scheme*/
+                
                 identity.AddClaim(new Claim(ClaimTypes.Name, status.FirstName));
-                identity.AddClaim(new Claim(ClaimTypes.Name, status.LastName));
+                identity.AddClaim(new Claim(ClaimTypes.Surname, status.LastName));
                 var principal = new ClaimsPrincipal(identity);
                 HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
                 HttpContext.Session.SetString("EmailId", status.Email);
@@ -59,7 +64,20 @@ namespace Registration.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult LandingPage()
+        {
+            List<Mission> missions = _db.Missions.ToList();  
+            foreach(var mission in missions)
+            {
+                _db.Entry(mission).Reference(c => c.City).Load();
+                _db.Entry(mission).Reference(t => t.MissionTheme).Load();
+            }
+            return View(missions);
+        }
+
+        [HttpGet]
+        public IActionResult MissionAndRating()
         {
             return View();
         }
@@ -171,33 +189,46 @@ namespace Registration.Controllers
         [HttpGet]
         public IActionResult Registration()
         {
-
-            return View();
+            User user = new User();
+            return View(user);
         }
 
 
         
         [HttpPost]
         [Route("/Login/Registration", Name ="Register")]
-        public IActionResult Registration(RegistrationViewModel obj)
+        public IActionResult Registration(User user)
         {
-            var User_data = new User()
+            var validEmail = _db.Users.FirstOrDefault(u => u.Email == user.Email);
+            if (validEmail == null)
             {
-                FirstName = obj.FirstName,
-                LastName = obj.LastName,
-                Email = obj.Email,
-                PhoneNumber = obj.PhoneNumber,
-                Password = obj.Password,
-                CityId = 2,
-                CountryId = 1
-            };
+                _db.Users.Add(user);
+                _db.SaveChanges();
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                TempData["Error"] = "Email is already Exist";
+                return View();
+            }
+                //var User_data = new User()
+                //{
+                //    FirstName = obj.FirstName,
+                //    LastName = obj.LastName,
+                //    Email = obj.Email,
+                //    PhoneNumber = obj.PhoneNumber,
+                //    Password = obj.Password,
+                //    CityId = 2,
+                //    CountryId = 1
+                //};
 
-            _db.Users.Add(User_data);
-            _db.SaveChanges();
-            return RedirectToAction("Login");
+            //_db.Users.Add(User_data);
+            //_db.SaveChanges();
+            //return RedirectToAction("Login");
 
         }
 
+       
 
 
         // ____________________ResetPassword Controller_________________
@@ -226,5 +257,8 @@ namespace Registration.Controllers
             }
             return View();
         }
+
+
+       
     }
 }
